@@ -1,9 +1,17 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from './login';
-import Portal  from "./portal";
+import USERPortal  from "./Userportal";
+import USERUploadFiles from "./useruploadfilehistory"
+
+import USERSignedFiles  from "./usersignedfilehistory";
 import { Switch, Route, Link } from "react-router-dom";
-import Logout from "./logout";
+import Login1 from './login1'
+
+import Signup from "./signup";
+import HistoryOfFiles from './adminhisfil';
+import AdminPortal from './AdminPortal';
+import Logout from './logout';
 
 class App extends Component {
  render() {
@@ -11,11 +19,16 @@ class App extends Component {
       <div className="container mt-3">
       <Switch>
   
-        <Route exact path="/" component={Login} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Signup} />
+        <Route exact path="/file" component={Login} />
+        <Route exact path="/login" component={Login1}/>
+        <Route exact path="/logout" component={Logout}/>
+        <Route exact path="/signedFile" component={USERSignedFiles}/>
+        <Route exact path="/userUploadFiles" component={USERUploadFiles}/>
         
-        <Route exact path="/portal" component={Portal} />
-        <Route exact path="/logout" Component={Logout}/>
+        <Route exact path="/ADMINportal" component={AdminPortal} />
+<Route exact path="/USERportal" component={USERPortal} />
+       
       
       </Switch>
     </div>

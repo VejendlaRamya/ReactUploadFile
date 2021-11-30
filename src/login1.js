@@ -16,10 +16,10 @@ const required = value => {
   }
 };
 
-export default class Logout extends Component {
-   /* constructor(props) {
+export default class Login extends Component {
+  constructor(props) {
     super(props);
-  this.handleLogin = this.handleLogin.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
 
@@ -63,7 +63,6 @@ export default class Logout extends Component {
     
   
             this.setState({role:response.data.role});
-            alert(this.state.role)
             this.props.history.push(this.state.role+"portal");
             window.location.reload();
               
@@ -91,26 +90,11 @@ export default class Logout extends Component {
         loading: false
       });
     }
-  }*/
+  }
 
   render() {
     return (
-       
-        <div>
-             <nav>
-        <div>
-         
-        <ul id="nav"   style={{ display: "flex", justifyContent: 'flex-end'}}>
-          <li ><a href="/login">login</a></li>
-        </ul>
-       
-      </div>
-      </nav>
-            <center>
-        <h1>Logout Successfully</h1></center>
-    
-        </div>
-     /* <div className="row">
+      <div className="row">
         
        <div className="col-md-4"></div>
        
@@ -178,7 +162,7 @@ export default class Logout extends Component {
           </Form>
         </div>
       </div>
-      </div>*/
+      </div>
     );
   }
 }
